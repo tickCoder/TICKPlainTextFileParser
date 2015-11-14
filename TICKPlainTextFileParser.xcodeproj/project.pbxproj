@@ -15,6 +15,7 @@
 		2457AE8F1BF752950057A4C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2457AE8D1BF752950057A4C2 /* LaunchScreen.storyboard */; };
 		2457AE9A1BF752950057A4C2 /* TICKPlainTextFileParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AE991BF752950057A4C2 /* TICKPlainTextFileParserTests.m */; };
 		2457AEA51BF752950057A4C2 /* TICKPlainTextFileParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AEA41BF752950057A4C2 /* TICKPlainTextFileParserUITests.m */; };
+		2457AEB31BF754BE0057A4C2 /* TestBooks in Resources */ = {isa = PBXBuildFile; fileRef = 2457AEB21BF754BE0057A4C2 /* TestBooks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2457AEA01BF752950057A4C2 /* TICKPlainTextFileParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TICKPlainTextFileParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2457AEA41BF752950057A4C2 /* TICKPlainTextFileParserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TICKPlainTextFileParserUITests.m; sourceTree = "<group>"; };
 		2457AEA61BF752950057A4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2457AEB21BF754BE0057A4C2 /* TestBooks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestBooks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		2457AE7E1BF752950057A4C2 /* TICKPlainTextFileParser */ = {
 			isa = PBXGroup;
 			children = (
+				2457AEB21BF754BE0057A4C2 /* TestBooks */,
 				2457AE821BF752950057A4C2 /* AppDelegate.h */,
 				2457AE831BF752950057A4C2 /* AppDelegate.m */,
 				2457AE851BF752950057A4C2 /* ViewController.h */,
@@ -246,6 +249,7 @@
 				2457AE8F1BF752950057A4C2 /* LaunchScreen.storyboard in Resources */,
 				2457AE8C1BF752950057A4C2 /* Assets.xcassets in Resources */,
 				2457AE8A1BF752950057A4C2 /* Main.storyboard in Resources */,
+				2457AEB31BF754BE0057A4C2 /* TestBooks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
