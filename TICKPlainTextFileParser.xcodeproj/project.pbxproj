@@ -16,6 +16,7 @@
 		2457AE9A1BF752950057A4C2 /* TICKPlainTextFileParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AE991BF752950057A4C2 /* TICKPlainTextFileParserTests.m */; };
 		2457AEA51BF752950057A4C2 /* TICKPlainTextFileParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AEA41BF752950057A4C2 /* TICKPlainTextFileParserUITests.m */; };
 		2457AEB31BF754BE0057A4C2 /* TestBooks in Resources */ = {isa = PBXBuildFile; fileRef = 2457AEB21BF754BE0057A4C2 /* TestBooks */; };
+		2457AEB61BF75C300057A4C2 /* BookReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AEB51BF75C300057A4C2 /* BookReadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2457AEA41BF752950057A4C2 /* TICKPlainTextFileParserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TICKPlainTextFileParserUITests.m; sourceTree = "<group>"; };
 		2457AEA61BF752950057A4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2457AEB21BF754BE0057A4C2 /* TestBooks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestBooks; sourceTree = "<group>"; };
+		2457AEB41BF75C300057A4C2 /* BookReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReadViewController.h; sourceTree = "<group>"; };
+		2457AEB51BF75C300057A4C2 /* BookReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				2457AE8D1BF752950057A4C2 /* LaunchScreen.storyboard */,
 				2457AE901BF752950057A4C2 /* Info.plist */,
 				2457AE7F1BF752950057A4C2 /* Supporting Files */,
+				2457AEB41BF75C300057A4C2 /* BookReadViewController.h */,
+				2457AEB51BF75C300057A4C2 /* BookReadViewController.m */,
 			);
 			path = TICKPlainTextFileParser;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2457AE871BF752950057A4C2 /* ViewController.m in Sources */,
+				2457AEB61BF75C300057A4C2 /* BookReadViewController.m in Sources */,
 				2457AE841BF752950057A4C2 /* AppDelegate.m in Sources */,
 				2457AE811BF752950057A4C2 /* main.m in Sources */,
 			);
