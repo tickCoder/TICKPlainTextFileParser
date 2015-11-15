@@ -50,7 +50,10 @@
 #pragma mark - Private
 - (void)_tick_reloadBookList {
     NSMutableArray *tList = [[NSMutableArray alloc] init];
+    
+    // Bundle
     NSString *tBookDir = [[NSBundle mainBundle] bundlePath];
+    NSLog(@"%@", tBookDir);
     tBookDir = [tBookDir stringByAppendingPathComponent:@"TestBooks"];
     NSArray *tDirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:tBookDir error:nil];
     for (NSString *tFileName in tDirContents) {
@@ -59,6 +62,18 @@
             [tList addObject:tFilePath];
         }
     }
+    
+    // Document
+    NSString *tDocDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"%@", tDocDir);
+    NSArray *tDocContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:tDocDir error:nil];
+    for (NSString *tFileName in tDocContents) {
+        if ([tFileName.pathExtension.lowercaseString isEqualToString:@"txt"]) {
+            NSString *tFilePath = [tDocDir stringByAppendingPathComponent:tFileName];
+            [tList addObject:tFilePath];
+        }
+    }
+    
     self.bookList = [NSArray arrayWithArray:tList];
 }
 
@@ -78,12 +93,37 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *tFileName = [[_bookList objectAtIndex:indexPath.row] lastPathComponent];
+    
+    /*
+     NSString *tFilePath = [self.fileList objectAtIndex:indexPath.row];
+     NSString *tFileName = [tFilePath lastPathComponent];
+     NSFileHandle *tFileHandle = [NSFileHandle fileHandleForReadingAtPath:tFilePath];
+     NSData *tBeginData = [tFileHandle readDataOfLength:3];
+     
+     NSString *tBytesStr = @"";
+     Byte *tBytes = (Byte *)[tBeginData bytes];
+     for (int i=0; i<[tBeginData length]; i++) {
+     NSString *tByteStr = [NSString stringWithFormat:@"%x", tBytes[i]];
+     tBytesStr = [tBytesStr stringByAppendingFormat:@"%@", tByteStr];
+     }
+     //NSString *tBytesStr = [NSString stringWithFormat:@"%s", tBytes];
+     
+     NSString *tLabelStr = [NSString stringWithFormat:@"%@,%@", tBeginData, tFileName];
+     */
+    
+    NSString *tFilePath = [_bookList objectAtIndex:indexPath.row];
+    NSString *tFileName = [tFilePath lastPathComponent];
+    NSFileHandle *tFileHandle = [NSFileHandle fileHandleForReadingAtPath:tFilePath];
+    NSData *tBeginData = [tFileHandle readDataOfLength:3];
+    Byte *tBytes = (Byte *)[tBeginData bytes];
+    NSString *tLabelStr = [NSString stringWithFormat:@"%@:%@", tBeginData, tFileName];
+    
+    NSLog(@"%@, %@", tFileName, tBeginData);
     
     NSString *tCellIdentifier = NSStringFromClass([UITableViewCell class]);
     UITableViewCell *tCell = [tableView dequeueReusableCellWithIdentifier:tCellIdentifier];
     tCell.accessoryType = UITableViewCellAccessoryDetailButton;
-    tCell.textLabel.text = tFileName;
+    tCell.textLabel.text = tLabelStr;
     
     return tCell;
 }
