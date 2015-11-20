@@ -1,0 +1,226 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red28\green0\blue207;\red0\green116\blue0;
+\red100\green56\blue32;\red46\green13\blue110;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22460\viewh8400\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \CocoaLigature0 typedef\cf0  \cf2 CF_ENUM\cf0 (CFStringEncoding, CFStringBuiltInEncodings) \{\
+    kCFStringEncodingMacRoman = \cf3 0\cf0 ,\
+    kCFStringEncodingWindowsLatin1 = \cf3 0x0500\cf0 , \cf4 /* ANSI codepage 1252 */\cf0 \
+    kCFStringEncodingISOLatin1 = \cf3 0x0201\cf0 , \cf4 /* ISO 8859-1 */\cf0 \
+    kCFStringEncodingNextStepLatin = \cf3 0x0B01\cf0 , \cf4 /* NextStep encoding*/\cf0 \
+    kCFStringEncodingASCII = \cf3 0x0600\cf0 , \cf4 /* 0..127 (in creating CFString, values greater than 0x7F are treated as corresponding Unicode value) */\cf0 \
+    kCFStringEncodingUnicode = \cf3 0x0100\cf0 , \cf4 /* kTextEncodingUnicodeDefault  + kTextEncodingDefaultFormat (aka kUnicode16BitFormat) */\cf0 \
+    kCFStringEncodingUTF8 = \cf3 0x08000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF8Format */\cf0 \
+    kCFStringEncodingNonLossyASCII = \cf3 0x0BFF\cf0 , \cf4 /* 7bit Unicode variants used by Cocoa & Java */\cf0 \
+\
+    kCFStringEncodingUTF16 = \cf3 0x0100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF16Format (alias of kCFStringEncodingUnicode) */\cf0 \
+    kCFStringEncodingUTF16BE = \cf3 0x10000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF16BEFormat */\cf0 \
+    kCFStringEncodingUTF16LE = \cf3 0x14000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF16LEFormat */\cf0 \
+\
+    kCFStringEncodingUTF32 = \cf3 0x0c000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF32Format */\cf0 \
+    kCFStringEncodingUTF32BE = \cf3 0x18000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF32BEFormat */\cf0 \
+    kCFStringEncodingUTF32LE = \cf3 0x1c000100\cf0  \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF32LEFormat */\cf0 \
+\};\
+\
+\
+\cf2 typedef\cf0  \cf2 CF_ENUM\cf0 (CFIndex, CFStringEncodings) \{\
+\cf4 /*  kCFStringEncodingMacRoman = 0L, defined in CoreFoundation/CFString.h */\cf0 \
+    kCFStringEncodingMacJapanese = \cf3 1\cf0 ,\
+    kCFStringEncodingMacChineseTrad = \cf3 2\cf0 ,\
+    kCFStringEncodingMacKorean = \cf3 3\cf0 ,\
+    kCFStringEncodingMacArabic = \cf3 4\cf0 ,\
+    kCFStringEncodingMacHebrew = \cf3 5\cf0 ,\
+    kCFStringEncodingMacGreek = \cf3 6\cf0 ,\
+    kCFStringEncodingMacCyrillic = \cf3 7\cf0 ,\
+    kCFStringEncodingMacDevanagari = \cf3 9\cf0 ,\
+    kCFStringEncodingMacGurmukhi = \cf3 10\cf0 ,\
+    kCFStringEncodingMacGujarati = \cf3 11\cf0 ,\
+    kCFStringEncodingMacOriya = \cf3 12\cf0 ,\
+    kCFStringEncodingMacBengali = \cf3 13\cf0 ,\
+    kCFStringEncodingMacTamil = \cf3 14\cf0 ,\
+    kCFStringEncodingMacTelugu = \cf3 15\cf0 ,\
+    kCFStringEncodingMacKannada = \cf3 16\cf0 ,\
+    kCFStringEncodingMacMalayalam = \cf3 17\cf0 ,\
+    kCFStringEncodingMacSinhalese = \cf3 18\cf0 ,\
+    kCFStringEncodingMacBurmese = \cf3 19\cf0 ,\
+    kCFStringEncodingMacKhmer = \cf3 20\cf0 ,\
+    kCFStringEncodingMacThai = \cf3 21\cf0 ,\
+    kCFStringEncodingMacLaotian = \cf3 22\cf0 ,\
+    kCFStringEncodingMacGeorgian = \cf3 23\cf0 ,\
+    kCFStringEncodingMacArmenian = \cf3 24\cf0 ,\
+    kCFStringEncodingMacChineseSimp = \cf3 25\cf0 ,\
+    kCFStringEncodingMacTibetan = \cf3 26\cf0 ,\
+    kCFStringEncodingMacMongolian = \cf3 27\cf0 ,\
+    kCFStringEncodingMacEthiopic = \cf3 28\cf0 ,\
+    kCFStringEncodingMacCentralEurRoman = \cf3 29\cf0 ,\
+    kCFStringEncodingMacVietnamese = \cf3 30\cf0 ,\
+    kCFStringEncodingMacExtArabic = \cf3 31\cf0 ,\
+    \cf4 /* The following use script code 0, smRoman */\cf0 \
+    kCFStringEncodingMacSymbol = \cf3 33\cf0 ,\
+    kCFStringEncodingMacDingbats = \cf3 34\cf0 ,\
+    kCFStringEncodingMacTurkish = \cf3 35\cf0 ,\
+    kCFStringEncodingMacCroatian = \cf3 36\cf0 ,\
+    kCFStringEncodingMacIcelandic = \cf3 37\cf0 ,\
+    kCFStringEncodingMacRomanian = \cf3 38\cf0 ,\
+    kCFStringEncodingMacCeltic = \cf3 39\cf0 ,\
+    kCFStringEncodingMacGaelic = \cf3 40\cf0 ,\
+    \cf4 /* The following use script code 4, smArabic */\cf0 \
+    kCFStringEncodingMacFarsi = \cf3 0x8C\cf0 ,	\cf4 /* Like MacArabic but uses Farsi digits */\cf0 \
+    \cf4 /* The following use script code 7, smCyrillic */\cf0 \
+    kCFStringEncodingMacUkrainian = \cf3 0x98\cf0 ,\
+    \cf4 /* The following use script code 32, smUnimplemented */\cf0 \
+    kCFStringEncodingMacInuit = \cf3 0xEC\cf0 ,\
+    kCFStringEncodingMacVT100 = \cf3 0xFC\cf0 ,	\cf4 /* VT100/102 font from Comm Toolbox: Latin-1 repertoire + box drawing etc */\cf0 \
+    \cf4 /* Special Mac OS encodings*/\cf0 \
+    kCFStringEncodingMacHFS = \cf3 0xFF\cf0 ,	\cf4 /* Meta-value, should never appear in a table */\cf0 \
+\
+    \cf4 /* Unicode & ISO UCS encodings begin at 0x100 */\cf0 \
+    \cf4 /* We don't use Unicode variations defined in TextEncoding; use the ones in CFString.h, instead. */\cf0 \
+\
+    \cf4 /* ISO 8-bit and 7-bit encodings begin at 0x200 */\cf0 \
+\cf4 /*  kCFStringEncodingISOLatin1 = 0x0201, defined in CoreFoundation/CFString.h */\cf0 \
+    kCFStringEncodingISOLatin2 = \cf3 0x0202\cf0 ,	\cf4 /* ISO 8859-2 */\cf0 \
+    kCFStringEncodingISOLatin3 = \cf3 0x0203\cf0 ,	\cf4 /* ISO 8859-3 */\cf0 \
+    kCFStringEncodingISOLatin4 = \cf3 0x0204\cf0 ,	\cf4 /* ISO 8859-4 */\cf0 \
+    kCFStringEncodingISOLatinCyrillic = \cf3 0x0205\cf0 ,	\cf4 /* ISO 8859-5 */\cf0 \
+    kCFStringEncodingISOLatinArabic = \cf3 0x0206\cf0 ,	\cf4 /* ISO 8859-6, =ASMO 708, =DOS CP 708 */\cf0 \
+    kCFStringEncodingISOLatinGreek = \cf3 0x0207\cf0 ,	\cf4 /* ISO 8859-7 */\cf0 \
+    kCFStringEncodingISOLatinHebrew = \cf3 0x0208\cf0 ,	\cf4 /* ISO 8859-8 */\cf0 \
+    kCFStringEncodingISOLatin5 = \cf3 0x0209\cf0 ,	\cf4 /* ISO 8859-9 */\cf0 \
+    kCFStringEncodingISOLatin6 = \cf3 0x020A\cf0 ,	\cf4 /* ISO 8859-10 */\cf0 \
+    kCFStringEncodingISOLatinThai = \cf3 0x020B\cf0 ,	\cf4 /* ISO 8859-11 */\cf0 \
+    kCFStringEncodingISOLatin7 = \cf3 0x020D\cf0 ,	\cf4 /* ISO 8859-13 */\cf0 \
+    kCFStringEncodingISOLatin8 = \cf3 0x020E\cf0 ,	\cf4 /* ISO 8859-14 */\cf0 \
+    kCFStringEncodingISOLatin9 = \cf3 0x020F\cf0 ,	\cf4 /* ISO 8859-15 */\cf0 \
+    kCFStringEncodingISOLatin10 = \cf3 0x0210\cf0 ,	\cf4 /* ISO 8859-16 */\cf0 \
+\
+    \cf4 /* MS-DOS & Windows encodings begin at 0x400 */\cf0 \
+    kCFStringEncodingDOSLatinUS = \cf3 0x0400\cf0 ,	\cf4 /* code page 437 */\cf0 \
+    kCFStringEncodingDOSGreek = \cf3 0x0405\cf0 ,		\cf4 /* code page 737 (formerly code page 437G) */\cf0 \
+    kCFStringEncodingDOSBalticRim = \cf3 0x0406\cf0 ,	\cf4 /* code page 775 */\cf0 \
+    kCFStringEncodingDOSLatin1 = \cf3 0x0410\cf0 ,	\cf4 /* code page 850, "Multilingual" */\cf0 \
+    kCFStringEncodingDOSGreek1 = \cf3 0x0411\cf0 ,	\cf4 /* code page 851 */\cf0 \
+    kCFStringEncodingDOSLatin2 = \cf3 0x0412\cf0 ,	\cf4 /* code page 852, Slavic */\cf0 \
+    kCFStringEncodingDOSCyrillic = \cf3 0x0413\cf0 ,	\cf4 /* code page 855, IBM Cyrillic */\cf0 \
+    kCFStringEncodingDOSTurkish = \cf3 0x0414\cf0 ,	\cf4 /* code page 857, IBM Turkish */\cf0 \
+    kCFStringEncodingDOSPortuguese = \cf3 0x0415\cf0 ,	\cf4 /* code page 860 */\cf0 \
+    kCFStringEncodingDOSIcelandic = \cf3 0x0416\cf0 ,	\cf4 /* code page 861 */\cf0 \
+    kCFStringEncodingDOSHebrew = \cf3 0x0417\cf0 ,	\cf4 /* code page 862 */\cf0 \
+    kCFStringEncodingDOSCanadianFrench = \cf3 0x0418\cf0 , \cf4 /* code page 863 */\cf0 \
+    kCFStringEncodingDOSArabic = \cf3 0x0419\cf0 ,	\cf4 /* code page 864 */\cf0 \
+    kCFStringEncodingDOSNordic = \cf3 0x041A\cf0 ,	\cf4 /* code page 865 */\cf0 \
+    kCFStringEncodingDOSRussian = \cf3 0x041B\cf0 ,	\cf4 /* code page 866 */\cf0 \
+    kCFStringEncodingDOSGreek2 = \cf3 0x041C\cf0 ,	\cf4 /* code page 869, IBM Modern Greek */\cf0 \
+    kCFStringEncodingDOSThai = \cf3 0x041D\cf0 ,		\cf4 /* code page 874, also for Windows */\cf0 \
+    kCFStringEncodingDOSJapanese = \cf3 0x0420\cf0 ,	\cf4 /* code page 932, also for Windows */\cf0 \
+    kCFStringEncodingDOSChineseSimplif = \cf3 0x0421\cf0 , \cf4 /* code page 936, also for Windows */\cf0 \
+    kCFStringEncodingDOSKorean = \cf3 0x0422\cf0 ,	\cf4 /* code page 949, also for Windows; Unified Hangul Code */\cf0 \
+    kCFStringEncodingDOSChineseTrad = \cf3 0x0423\cf0 ,	\cf4 /* code page 950, also for Windows */\cf0 \
+\cf4 /*  kCFStringEncodingWindowsLatin1 = 0x0500, defined in CoreFoundation/CFString.h */\cf0 \
+    kCFStringEncodingWindowsLatin2 = \cf3 0x0501\cf0 ,	\cf4 /* code page 1250, Central Europe */\cf0 \
+    kCFStringEncodingWindowsCyrillic = \cf3 0x0502\cf0 ,	\cf4 /* code page 1251, Slavic Cyrillic */\cf0 \
+    kCFStringEncodingWindowsGreek = \cf3 0x0503\cf0 ,	\cf4 /* code page 1253 */\cf0 \
+    kCFStringEncodingWindowsLatin5 = \cf3 0x0504\cf0 ,	\cf4 /* code page 1254, Turkish */\cf0 \
+    kCFStringEncodingWindowsHebrew = \cf3 0x0505\cf0 ,	\cf4 /* code page 1255 */\cf0 \
+    kCFStringEncodingWindowsArabic = \cf3 0x0506\cf0 ,	\cf4 /* code page 1256 */\cf0 \
+    kCFStringEncodingWindowsBalticRim = \cf3 0x0507\cf0 ,	\cf4 /* code page 1257 */\cf0 \
+    kCFStringEncodingWindowsVietnamese = \cf3 0x0508\cf0 , \cf4 /* code page 1258 */\cf0 \
+    kCFStringEncodingWindowsKoreanJohab = \cf3 0x0510\cf0 , \cf4 /* code page 1361, for Windows NT */\cf0 \
+\
+    \cf4 /* Various national standards begin at 0x600 */\cf0 \
+\cf4 /*  kCFStringEncodingASCII = 0x0600, defined in CoreFoundation/CFString.h */\cf0 \
+    kCFStringEncodingANSEL = \cf3 0x0601\cf0 ,	\cf4 /* ANSEL (ANSI Z39.47) */\cf0 \
+    kCFStringEncodingJIS_X0201_76 = \cf3 0x0620\cf0 ,\
+    kCFStringEncodingJIS_X0208_83 = \cf3 0x0621\cf0 ,\
+    kCFStringEncodingJIS_X0208_90 = \cf3 0x0622\cf0 ,\
+    kCFStringEncodingJIS_X0212_90 = \cf3 0x0623\cf0 ,\
+    kCFStringEncodingJIS_C6226_78 = \cf3 0x0624\cf0 ,\
+    kCFStringEncodingShiftJIS_X0213 \cf5 CF_ENUM_AVAILABLE\cf0 (\cf3 10\cf0 _5, \cf3 2\cf0 _0) = \cf3 0x0628\cf0 , \cf4 /* Shift-JIS format encoding of JIS X0213 planes 1 and 2*/\cf0 \
+    kCFStringEncodingShiftJIS_X0213_MenKuTen = \cf3 0x0629\cf0 ,	\cf4 /* JIS X0213 in plane-row-column notation */\cf0 \
+    kCFStringEncodingGB_2312_80 = \cf3 0x0630\cf0 ,\
+    kCFStringEncodingGBK_95 = \cf3 0x0631\cf0 ,		\cf4 /* annex to GB 13000-93; for Windows 95 */\cf0 \
+    kCFStringEncodingGB_18030_2000 = \cf3 0x0632\cf0 ,\
+    kCFStringEncodingKSC_5601_87 = \cf3 0x0640\cf0 ,	\cf4 /* same as KSC 5601-92 without Johab annex */\cf0 \
+    kCFStringEncodingKSC_5601_92_Johab = \cf3 0x0641\cf0 , \cf4 /* KSC 5601-92 Johab annex */\cf0 \
+    kCFStringEncodingCNS_11643_92_P1 = \cf3 0x0651\cf0 ,	\cf4 /* CNS 11643-1992 plane 1 */\cf0 \
+    kCFStringEncodingCNS_11643_92_P2 = \cf3 0x0652\cf0 ,	\cf4 /* CNS 11643-1992 plane 2 */\cf0 \
+    kCFStringEncodingCNS_11643_92_P3 = \cf3 0x0653\cf0 ,	\cf4 /* CNS 11643-1992 plane 3 (was plane 14 in 1986 version) */\cf0 \
+\
+    \cf4 /* ISO 2022 collections begin at 0x800 */\cf0 \
+    kCFStringEncodingISO_2022_JP = \cf3 0x0820\cf0 ,\
+    kCFStringEncodingISO_2022_JP_2 = \cf3 0x0821\cf0 ,\
+    kCFStringEncodingISO_2022_JP_1 = \cf3 0x0822\cf0 , \cf4 /* RFC 2237*/\cf0 \
+    kCFStringEncodingISO_2022_JP_3 = \cf3 0x0823\cf0 , \cf4 /* JIS X0213*/\cf0 \
+    kCFStringEncodingISO_2022_CN = \cf3 0x0830\cf0 ,\
+    kCFStringEncodingISO_2022_CN_EXT = \cf3 0x0831\cf0 ,\
+    kCFStringEncodingISO_2022_KR = \cf3 0x0840\cf0 ,\
+\
+    \cf4 /* EUC collections begin at 0x900 */\cf0 \
+    kCFStringEncodingEUC_JP = \cf3 0x0920\cf0 ,		\cf4 /* ISO 646, 1-byte katakana, JIS 208, JIS 212 */\cf0 \
+    kCFStringEncodingEUC_CN = \cf3 0x0930\cf0 ,		\cf4 /* ISO 646, GB 2312-80 */\cf0 \
+    kCFStringEncodingEUC_TW = \cf3 0x0931\cf0 ,		\cf4 /* ISO 646, CNS 11643-1992 Planes 1-16 */\cf0 \
+    kCFStringEncodingEUC_KR = \cf3 0x0940\cf0 ,		\cf4 /* ISO 646, KS C 5601-1987 */\cf0 \
+\
+    \cf4 /* Misc standards begin at 0xA00 */\cf0 \
+    kCFStringEncodingShiftJIS = \cf3 0x0A01\cf0 ,		\cf4 /* plain Shift-JIS */\cf0 \
+    kCFStringEncodingKOI8_R = \cf3 0x0A02\cf0 ,		\cf4 /* Russian internet standard */\cf0 \
+    kCFStringEncodingBig5 = \cf3 0x0A03\cf0 ,		\cf4 /* Big-5 (has variants) */\cf0 \
+    kCFStringEncodingMacRomanLatin1 = \cf3 0x0A04\cf0 ,	\cf4 /* Mac OS Roman permuted to align with ISO Latin-1 */\cf0 \
+    kCFStringEncodingHZ_GB_2312 = \cf3 0x0A05\cf0 ,	\cf4 /* HZ (RFC 1842, for Chinese mail & news) */\cf0 \
+    kCFStringEncodingBig5_HKSCS_1999 = \cf3 0x0A06\cf0 , \cf4 /* Big-5 with Hong Kong special char set supplement*/\cf0 \
+    kCFStringEncodingVISCII = \cf3 0x0A07\cf0 ,	\cf4 /* RFC 1456, Vietnamese */\cf0 \
+    kCFStringEncodingKOI8_U = \cf3 0x0A08\cf0 ,	\cf4 /* RFC 2319, Ukrainian */\cf0 \
+    kCFStringEncodingBig5_E = \cf3 0x0A09\cf0 ,	\cf4 /* Taiwan Big-5E standard */\cf0 \
+\
+    \cf4 /* Other platform encodings*/\cf0 \
+\cf4 /*  kCFStringEncodingNextStepLatin = 0x0B01, defined in CoreFoundation/CFString.h */\cf0 \
+    kCFStringEncodingNextStepJapanese = \cf3 0x0B02\cf0 ,	\cf4 /* NextStep Japanese encoding */\cf0 \
+\
+    \cf4 /* EBCDIC & IBM host encodings begin at 0xC00 */\cf0 \
+    kCFStringEncodingEBCDIC_US = \cf3 0x0C01\cf0 ,	\cf4 /* basic EBCDIC-US */\cf0 \
+    kCFStringEncodingEBCDIC_CP037 = \cf3 0x0C02\cf0 ,	\cf4 /* code page 037, extended EBCDIC (Latin-1 set) for US,Canada... */\cf0 \
+\
+    kCFStringEncodingUTF7 \cf5 CF_ENUM_AVAILABLE\cf0 (\cf3 10\cf0 _6, \cf3 4\cf0 _0) = \cf3 0x04000100\cf0 , \cf4 /* kTextEncodingUnicodeDefault + kUnicodeUTF7Format RFC2152 */\cf0 \
+    kCFStringEncodingUTF7_IMAP \cf5 CF_ENUM_AVAILABLE\cf0 (\cf3 10\cf0 _6, \cf3 4\cf0 _0) = \cf3 0x0A10\cf0 , \cf4 /* UTF-7 (IMAP folder variant) RFC3501 */\cf0 \
+\
+    \cf4 /* Deprecated constants */\cf0 \
+    kCFStringEncodingShiftJIS_X0213_00 = \cf3 0x0628\cf0  \cf4 /* Shift-JIS format encoding of JIS X0213 planes 1 and 2 (DEPRECATED) */\cf0 \
+\};\
+\
+\
+\cf2 NS_ENUM\cf0 (NSStringEncoding) \{\
+    NSASCIIStringEncoding = \cf3 1\cf0 ,		\cf4 /* 0..127 only */\cf0 \
+    NSNEXTSTEPStringEncoding = \cf3 2\cf0 ,\
+    NSJapaneseEUCStringEncoding = \cf3 3\cf0 ,\
+    NSUTF8StringEncoding = \cf3 4\cf0 ,\
+    NSISOLatin1StringEncoding = \cf3 5\cf0 ,\
+    NSSymbolStringEncoding = \cf3 6\cf0 ,\
+    NSNonLossyASCIIStringEncoding = \cf3 7\cf0 ,\
+    NSShiftJISStringEncoding = \cf3 8\cf0 ,          \cf4 /* kCFStringEncodingDOSJapanese */\cf0 \
+    NSISOLatin2StringEncoding = \cf3 9\cf0 ,\
+    NSUnicodeStringEncoding = \cf3 10\cf0 ,\
+    NSWindowsCP1251StringEncoding = \cf3 11\cf0 ,    \cf4 /* Cyrillic; same as AdobeStandardCyrillic */\cf0 \
+    NSWindowsCP1252StringEncoding = \cf3 12\cf0 ,    \cf4 /* WinLatin1 */\cf0 \
+    NSWindowsCP1253StringEncoding = \cf3 13\cf0 ,    \cf4 /* Greek */\cf0 \
+    NSWindowsCP1254StringEncoding = \cf3 14\cf0 ,    \cf4 /* Turkish */\cf0 \
+    NSWindowsCP1250StringEncoding = \cf3 15\cf0 ,    \cf4 /* WinLatin2 */\cf0 \
+    NSISO2022JPStringEncoding = \cf3 21\cf0 ,        \cf4 /* ISO 2022 Japanese encoding for e-mail */\cf0 \
+    NSMacOSRomanStringEncoding = \cf3 30\cf0 ,\
+\
+    NSUTF16StringEncoding = \cf6 NSUnicodeStringEncoding\cf0 ,      \cf4 /* An alias for NSUnicodeStringEncoding */\cf0 \
+\
+    NSUTF16BigEndianStringEncoding = \cf3 0x90000100\cf0 ,          \cf4 /* NSUTF16StringEncoding encoding with explicit endianness specified */\cf0 \
+    NSUTF16LittleEndianStringEncoding = \cf3 0x94000100\cf0 ,       \cf4 /* NSUTF16StringEncoding encoding with explicit endianness specified */\cf0 \
+\
+    NSUTF32StringEncoding = \cf3 0x8c000100\cf0 ,                   \
+    NSUTF32BigEndianStringEncoding = \cf3 0x98000100\cf0 ,          \cf4 /* NSUTF32StringEncoding encoding with explicit endianness specified */\cf0 \
+    NSUTF32LittleEndianStringEncoding = \cf3 0x9c000100\cf0         \cf4 /* NSUTF32StringEncoding encoding with explicit endianness specified */\cf0 \
+\};\
+\
+\cf2 typedef\cf0  \cf2 NS_OPTIONS\cf0 (NSUInteger, NSStringEncodingConversionOptions) \{\
+    NSStringEncodingConversionAllowLossy = \cf3 1\cf0 ,\
+    NSStringEncodingConversionExternalRepresentation = \cf3 2\cf0 \
+\};}

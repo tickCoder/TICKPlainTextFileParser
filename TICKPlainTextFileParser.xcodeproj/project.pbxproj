@@ -18,6 +18,7 @@
 		2457AEB31BF754BE0057A4C2 /* TestBooks in Resources */ = {isa = PBXBuildFile; fileRef = 2457AEB21BF754BE0057A4C2 /* TestBooks */; };
 		2457AEB61BF75C300057A4C2 /* BookReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AEB51BF75C300057A4C2 /* BookReadViewController.m */; };
 		2457AEBA1BF76C140057A4C2 /* TICKPlainTextFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457AEB91BF76C140057A4C2 /* TICKPlainTextFileParser.m */; };
+		24E2149C1BFF73A100420262 /* encoding.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 24E2149B1BFF73A100420262 /* encoding.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2457AEB51BF75C300057A4C2 /* BookReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReadViewController.m; sourceTree = "<group>"; };
 		2457AEB81BF76C140057A4C2 /* TICKPlainTextFileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TICKPlainTextFileParser.h; sourceTree = "<group>"; };
 		2457AEB91BF76C140057A4C2 /* TICKPlainTextFileParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TICKPlainTextFileParser.m; sourceTree = "<group>"; };
+		24E2149B1BFF73A100420262 /* encoding.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = encoding.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				2457AE861BF752950057A4C2 /* ViewController.m */,
 				2457AE881BF752950057A4C2 /* Main.storyboard */,
 				2457AE8B1BF752950057A4C2 /* Assets.xcassets */,
+				24E2149B1BFF73A100420262 /* encoding.rtf */,
 				2457AE8D1BF752950057A4C2 /* LaunchScreen.storyboard */,
 				2457AE901BF752950057A4C2 /* Info.plist */,
 				2457AE7F1BF752950057A4C2 /* Supporting Files */,
@@ -268,6 +271,7 @@
 				2457AE8C1BF752950057A4C2 /* Assets.xcassets in Resources */,
 				2457AE8A1BF752950057A4C2 /* Main.storyboard in Resources */,
 				2457AEB31BF754BE0057A4C2 /* TestBooks in Resources */,
+				24E2149C1BFF73A100420262 /* encoding.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
